@@ -1,20 +1,13 @@
-#Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# Field Worker Bot
 
-#Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+This is the project created by Powel team during Microsoft Bot Framework Hackfest in Microsoft Norway, Oslo, March 2017. 
+The project contains a bot application hosted in ASP.NET Web API and a Xamarin client application. 
 
-#Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+## Purpose of the project
 
-#Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+Field Worker Bot is a Proof-of-Concept solution for field workers performing electrical grid inspections. In many cases they are not able to add discrepancies to their systems using traditional web or mobile applications, during performing inspections. Because of difficult conditions, like work at height, dirt or frost, they have to add these information later. With use of Microsoft Bot Framework together with Speech-to-Text and Text-to-Speech technologies the engineer is now able to perform these actions using his voice.
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://www.visualstudio.com/en-us/docs/git/create-a-readme). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+
+You can find more information about Bot Framework and LUIS under the following links:
+- [Microsoft Bot Framework](https://dev.botframework.com/)
+- [Microsoft Language Understanding (LUIS)](https://www.luis.ai/)
