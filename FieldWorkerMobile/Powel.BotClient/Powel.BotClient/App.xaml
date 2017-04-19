@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Powel.BotClient.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="PowelBlue">#0a5282</Color>
+            <Color x:Key="BackgroundLightBlue">#e5edf2</Color>
+            <Color x:Key="SeparatorGray">#b7c2c7</Color>
+            <Color x:Key="EditorBackgroundGray">#fafbfc</Color>
+            <Color x:Key="TextDark">#524e3d</Color>
+            <Color x:Key="BotBubbleBackground">#ebebe8</Color>
+            
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

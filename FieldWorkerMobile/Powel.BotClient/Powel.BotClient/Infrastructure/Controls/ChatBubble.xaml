@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Powel.BotClient.Infrastructure.Controls.ChatBubble"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:viewModels="clr-namespace:Powel.BotClient.ViewModels;assembly=Powel.BotClient,Version=v4.6,Profile=Profile44"
+             d:DataContext="{d:DesignInstance viewModels:ChatBubbleViewModel}">
+    <ContentView.Content>
+        <StackLayout Margin="{Binding Margin}"
+                     BackgroundColor="{Binding BackgroundColor}">
+            <Label Text="{Binding Text}"
+                   IsVisible="{Binding IsTextVisible}"
+                   TextColor="{Binding TextColor}"
+                   Margin="10" />
+            <Image Source="{Binding Image}"
+                   Margin="10"
+                   IsVisible="{Binding IsImageVisible}"></Image>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>
+

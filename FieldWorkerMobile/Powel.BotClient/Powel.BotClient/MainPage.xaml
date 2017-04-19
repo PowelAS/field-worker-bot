@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Powel.BotClient.MainPage"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:viewModels="clr-namespace:Powel.BotClient.ViewModels;assembly=Powel.BotClient,Version=v4.6,Profile=Profile44"
+             xmlns:controls="clr-namespace:Powel.BotClient.Infrastructure.Controls;assembly=Powel.BotClient"
+             d:DataContext="{d:DesignInstance viewModels:MainPageViewModel}">
+    <StackLayout Spacing="0">
+        <BoxView HeightRequest="1"
+                 BackgroundColor="White"
+                 HorizontalOptions="FillAndExpand"></BoxView>
+        <ContentView BackgroundColor="{StaticResource PowelBlue}"
+                     HeightRequest="50">
+            <Image Source="powellogo.png"
+                   Margin="10"
+                   HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="CenterAndExpand"></Image>
+        </ContentView>
+        <ScrollView VerticalOptions="EndAndExpand"
+                    x:Name="Scroll">
+            <controls:ChatComponent VerticalOptions="EndAndExpand"
+                                    BindingContext="{Binding Messages}"></controls:ChatComponent>
+        </ScrollView>
+        <Label FontSize="11"
+               Text="André is thinking..."
+               TextColor="{StaticResource PowelBlue}"
+               Opacity="{Binding IsTypingMessageVisible}"
+               Margin="5,0,5,5" />
+        <StackLayout BackgroundColor="{StaticResource BackgroundLightBlue}"
+                     Spacing="0">
+            <BoxView HeightRequest="1"
+                     HorizontalOptions="FillAndExpand"
+                     BackgroundColor="{StaticResource SeparatorGray}" />
+            <ContentView HorizontalOptions="FillAndExpand">
+                <Label Text="Upload image"
+                       TextColor="{StaticResource PowelBlue}"
+                       Margin="10"
+                       HorizontalOptions="CenterAndExpand"></Label>
+                <ContentView.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding OnUploadImageClicked}"></TapGestureRecognizer>
+                </ContentView.GestureRecognizers>
+            </ContentView>
+            <BoxView HeightRequest="1"
+                     HorizontalOptions="FillAndExpand"
+                     BackgroundColor="{StaticResource SeparatorGray}" />
+            <ContentView HorizontalOptions="FillAndExpand">
+                <Image Source="microphone.png"
+                       HeightRequest="42"
+                       WidthRequest="42"
+                       Margin="10">
+                </Image>
+                <ContentView.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding OnMicrophoneClicked}"></TapGestureRecognizer>
+                </ContentView.GestureRecognizers>
+            </ContentView>
+
+            <BoxView HeightRequest="1"
+                     HorizontalOptions="FillAndExpand"
+                     BackgroundColor="{StaticResource SeparatorGray}" />
+            <StackLayout Orientation="Horizontal"
+                         VerticalOptions="End"
+                         Margin="10">
+                <Entry Text="{Binding ChatInputText}"
+                       x:Name="ChatInputEntry"
+                       HorizontalOptions="FillAndExpand"
+                       Completed="OnSendTextButtonClicked"
+                       BackgroundColor="{StaticResource EditorBackgroundGray}"
+                       TextColor="{StaticResource TextDark}"></Entry>
+                <ContentView>
+                    <Image VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="CenterAndExpand"
+                           Source="send.png"
+                           WidthRequest="38"
+                           Margin="10,0,10,0" />
+                    <ContentView.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding SendClicked}"></TapGestureRecognizer>
+                    </ContentView.GestureRecognizers>
+                </ContentView>
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
