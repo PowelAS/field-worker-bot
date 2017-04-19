@@ -115,6 +115,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\MessagesController.cs" />
     <Compile Include="Dialogs\DiscrepancyFormDialogBuilder.cs" />
+    <Compile Include="Dialogs\InsoectionDialog.cs" />
     <Compile Include="Dialogs\FieldWorkerDialog.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
